@@ -121,8 +121,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 const citiesAtoJ = (arr) => {
   let reg = /^[A-J]/;
   let newArr = [];
-  for(let city of arr) {
-    if(reg.test(city)){
+  for (let city of arr) {
+    if (reg.test(city)) {
       newArr.push(city);
     }
   }
