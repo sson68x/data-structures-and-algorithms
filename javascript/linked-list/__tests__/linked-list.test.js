@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our linked list implementation
-const { LinkedList, Node } = require('../linked-list');
+const { LinkedList, Node } = require('../linked-lists');
 
 
 describe('Linked List', () => {
