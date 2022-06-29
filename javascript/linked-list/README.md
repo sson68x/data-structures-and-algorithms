@@ -21,6 +21,10 @@ Create a Node class that has properties for the value stored in the Node, and a 
   - Returns: a string representing all the values in the Linked List, formatted as:
     - "{ a } -> { b } -> { c } -> NULL"
 
+## Code Challenge 10 : Stack and a Queue Implementation
+
+- Using a Linked List as the underlying data storage mechanism, implement both a Stack and a Queue.
+
 ## Approach & Efficiency
 
 - Reviewed the lecture and testing via console.logs.
@@ -28,4 +32,5 @@ Create a Node class that has properties for the value stored in the Node, and a 
 
 ## API
 
-- `insert`, `includes`, and `toString` methods used.
+- CC5: `insert`, `includes`, and `toString` methods used.
+- CC10: `push`, `pop`, `enqueue`, `dequeue`, `peek`, and `isEmpty` used.
