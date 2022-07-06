@@ -64,6 +64,24 @@ class BinaryTree {
     return results;
 
   }
+
+  treeMaxValue() {
+    if (this.root === null ) {
+      return null;
+    } else {
+      let maxValue = this.root.value;
+      let currentNode = this.root;
+      const traverse = node => {
+        if (node.value > maxValue) {
+          maxValue = node.value;
+        }
+        if (node.left) traverse(node.left);
+        if (node.right) traverse(node.right);
+      };
+      traverse(currentNode);
+      return maxValue;
+    }
+  }
 };
 
 class BinarySearchTree extends BinaryTree {
@@ -131,10 +149,12 @@ tree.root.right.right = new Node(20);
 let preOrder = tree.preOrder();
 let inOrder = tree.inOrder();
 let postOrder = tree.postOrder();
+let treeMax = tree.treeMaxValue
 
 console.log('preOrder:', preOrder);
 console.log('inOrder:', inOrder);
 console.log('postOrder:', postOrder);
+console.log('treeMax:', treeMax);
 
 let binarySearchTree = new BinarySearchTree();
 binarySearchTree.root = new Node(10);
