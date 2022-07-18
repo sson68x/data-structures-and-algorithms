@@ -10,6 +10,7 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
+    this.count = 0;
   }
 
   traverse() {
@@ -50,9 +51,8 @@ class LinkedList {
     result += 'NULL';
     return result;
   };
+
+  //CC 6 - append, insertBefore, insertAfter
 };
 
-module.exports = {
-  Node,
-  LinkedList,
-};
+module.exports = LinkedList;

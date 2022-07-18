@@ -1,7 +1,7 @@
 'use strict';
 
 class Node {
-  constructor(value){
+  constructor(value) {
     this.value = value;
     this.left = null;
     this.right = null;
@@ -9,7 +9,7 @@ class Node {
 }
 
 class KaryNode {
-  constructor(value, k){
+  constructor(value, k) {
     this.value = value;
     this.k = k;
     this.children = [];
@@ -18,12 +18,12 @@ class KaryNode {
 }
 
 class BinaryTree {
-  constructor(){
+  constructor() {
     this.root = null;
   }
 
-  preOrder(){
-    let results =  [];
+  preOrder() {
+    let results = [];
 
     //  recursive helper function
     const traverse = (node) => {
@@ -31,8 +31,8 @@ class BinaryTree {
       results.push(node.value);
 
       // need my recursive case(s)
-      if(node.left) traverse(node.left);
-      if(node.right) traverse(node.right);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
     };
 
     // start the recursive "party"
@@ -40,33 +40,32 @@ class BinaryTree {
     return results;
   }
 
-  inOrder(){
+  inOrder() {
     let results = [];
 
-    const traverse = (node) =>{
-      if(node.left) traverse(node.left);
+    const traverse = (node) => {
+      if (node.left) traverse(node.left);
       results.push(node.value);
-      if(node.right) traverse(node.right);
+      if (node.right) traverse(node.right);
     };
     traverse(this.root);
     return results;
   }
 
-  postOrder(){
+  postOrder() {
     let results = [];
 
     const traverse = (node) => {
-      if(node.left) traverse(node.left);
+      if (node.left) traverse(node.left);
       if (node.right) traverse(node.right);
       results.push(node.value);
     };
     traverse(this.root);
     return results;
-
   }
 
   treeMaxValue() {
-    if (this.root === null ) {
+    if (this.root === null) {
       return null;
     } else {
       let maxValue = this.root.value;
@@ -81,6 +80,24 @@ class BinaryTree {
       traverse(currentNode);
       return maxValue;
     }
+  }
+
+  breadthFirst(tree) {
+    // let queue = new Queue();
+    let results = [];
+    let current = tree.root;
+    queue.enqueue(current);
+    while (!queue.isEmpty()) {
+      current = queue.dequeue();
+      results.push(current.value);
+      if (current.left) {
+        queue.enqueue(current.left);
+      }
+      if (current.right) {
+        queue.enqueue(current.right);
+      }
+    }
+    return results;
   }
 };
 
@@ -149,12 +166,14 @@ tree.root.right.right = new Node(20);
 let preOrder = tree.preOrder();
 let inOrder = tree.inOrder();
 let postOrder = tree.postOrder();
-let treeMax = tree.treeMaxValue
+let treeMax = tree.treeMaxValue();
+let breadthFirst = tree.breadthFirst();
 
 console.log('preOrder:', preOrder);
 console.log('inOrder:', inOrder);
 console.log('postOrder:', postOrder);
 console.log('treeMax:', treeMax);
+console.log('breadthFirst:', breadthFirst);
 
 let binarySearchTree = new BinarySearchTree();
 binarySearchTree.root = new Node(10);
