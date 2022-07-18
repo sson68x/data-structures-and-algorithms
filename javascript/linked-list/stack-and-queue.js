@@ -20,7 +20,7 @@ class Stack {
 
   pop() {
     if (this.isEmpty()) {
-      console.error('Empty stack');
+      console.log('Empty stack');
       return null;
     }
     let node = this.top;

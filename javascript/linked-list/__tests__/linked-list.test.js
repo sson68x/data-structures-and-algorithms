@@ -1,11 +1,11 @@
 'use strict';
 
 // Require our linked list implementation
-const { LinkedList, Node } = require('../linked-lists');
+const { LinkedList } = require('../linked-lists');
 
 
 describe('Linked List', () => {
-  it('works', () => {
+  test('works', () => {
     expect(true).toBeTruthy();
   });
 
@@ -54,4 +54,5 @@ describe('Linked List', () => {
 
     expect(str).toEqual(expected);
   });
+
 });
