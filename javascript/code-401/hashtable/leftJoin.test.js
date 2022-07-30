@@ -23,9 +23,9 @@ describe('Hashmap Left-Join tests', () => {
     let map2 = new Map();
 
     map1.set('diligent', 'employed');
-    map2.set('vertical', 'horizontal');
-    map1.set('fond', 'enamoured');
-    map2.set('raise', 'lower');
+    map2.set('fond', 'enamoured');
+    map1.set('guide', 'usher');
+    map2.set('wrath', 'anger');
 
     let result = leftJoin(map1, map2);
 
@@ -40,11 +40,11 @@ describe('Hashmap Left-Join tests', () => {
     map1.set('diligent', 'employed');
     map2.set('diligent', 'idle');
     map1.set('fond', 'enamoured');
-    map2.set('raise', 'lower');
+    map2.set('garb', null);
 
     let result = leftJoin(map1, map2);
 
     expect(result.diligent).toEqual(['employed', 'idle']);
-    expect(result.fond).toEqual(['enamoured', null]);
+    expect(result.outfit).toEqual(['garb', null]);
   });
 });
