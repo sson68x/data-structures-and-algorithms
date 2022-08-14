@@ -59,4 +59,4 @@ ALGORITHM Merge(left, right, arr)
 
 ### Link to Code
 
-[Code Challenge 27](https://github.com/sson68x/)
+[Code Challenge 27](https://github.com/sson68x/data-structures-and-algorithms/blob/main/javascript/code-401/sorting/merge-sort/index.js)
