@@ -38,4 +38,4 @@ Once you are done with your article, code a working, tested implementation of In
 
 ### Link to Code
 
-[Code Challenge 26](https://github.com/sson68x/)
+[Code Challenge 26](https://github.com/sson68x/data-structures-and-algorithms/blob/main/javascript/code-401/sorting/insertion-sort/index.js)
