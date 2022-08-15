@@ -82,6 +82,21 @@ class HashTable {
   }
 }
 
+function repeatedWord(string){
+  let arr = string.split();
+  for (let i=0; i < arr; i++){
+    if (arr[i] === string) {
+      return arr[i];
+    } else {
+      null;
+    }
+  }
+}
+
+let string = 'Once upon a time, there was a brave princess who...';
+repeatedWord(string);
+
+
 // let table = new HashTable(1024);
 
 // console.log(table);
@@ -95,4 +110,5 @@ class HashTable {
 
 module.exports = {
   HashTable,
+  repeatedWord,
 };
