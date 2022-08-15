@@ -50,4 +50,12 @@ describe('Hashtable Tests', () => {
     expect(hash).toEqual(168);
   });
 
+  test('Successfully identifies repeated word', () => {
+    let string = 'Once upon a time, there was a brave princess who...';
+    let word = repeatedWord(string);
+
+    expect(word).toEqual('a');
+
+  });
+
 });
